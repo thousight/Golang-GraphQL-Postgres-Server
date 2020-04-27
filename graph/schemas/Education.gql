@@ -12,3 +12,14 @@ type Education {
   createdAt: Time
   updatedAt: Time
 }
+
+input EducationInput {
+  organization: String,
+  city: String,
+  state: String,
+  degree: String,
+  time: String,
+  order: Int,
+  image: String,
+  desc: [String]
+}

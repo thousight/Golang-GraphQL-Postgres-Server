@@ -10,11 +10,11 @@ import (
 	"golang-graphql-server/graph/generated/model"
 )
 
-func (r *mutationResolver) AddEducation(ctx context.Context, organization string, city string, state string, degree string, time string, order int, image string, desc []*string, primaryColor string, secondaryColor string, bannerImage *string) (*model.Education, error) {
+func (r *mutationResolver) AddEducation(ctx context.Context, education model.EducationInput, style model.StyleInput) (*model.Education, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *mutationResolver) UpdateEducation(ctx context.Context, id string, organization *string, city *string, state *string, degree *string, time *string, order *int, image *string, desc []*string) (*model.Education, error) {
+func (r *mutationResolver) UpdateEducation(ctx context.Context, id string, education model.EducationInput) (*model.Education, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
@@ -22,11 +22,11 @@ func (r *mutationResolver) DeleteEducation(ctx context.Context, id string, style
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *mutationResolver) AddExperience(ctx context.Context, organization string, city string, state string, title string, time string, order int, image string, desc []*string, primaryColor string, secondaryColor string, bannerImage *string) (*model.Experience, error) {
+func (r *mutationResolver) AddExperience(ctx context.Context, experience model.ExperienceInput, style model.StyleInput) (*model.Experience, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *mutationResolver) UpdateExperience(ctx context.Context, id string, organization *string, city *string, state *string, title *string, time *string, order *int, image *string, desc []*string) (*model.Experience, error) {
+func (r *mutationResolver) UpdateExperience(ctx context.Context, id string, experience model.ExperienceInput) (*model.Experience, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
@@ -34,7 +34,7 @@ func (r *mutationResolver) DeleteExperience(ctx context.Context, id string, styl
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *mutationResolver) UpdateStyle(ctx context.Context, id string, primaryColor *string, secondaryColor *string, bannerImage *string) (*model.Style, error) {
+func (r *mutationResolver) UpdateStyle(ctx context.Context, id string, style model.StyleInput) (*model.Style, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 

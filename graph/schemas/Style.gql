@@ -6,3 +6,9 @@ type Style {
   createdAt: Time
   updatedAt: Time
 }
+
+input StyleInput {
+  primaryColor: String
+  secondaryColor: String
+  bannerImage: String
+}

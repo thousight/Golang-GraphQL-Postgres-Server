@@ -12,3 +12,14 @@ type Experience {
   createdAt: Time
   updatedAt: Time
 }
+
+input ExperienceInput {
+  organization: String
+  city: String
+  state: String
+  title: String
+  time: String
+  order: Int
+  image: String
+  desc: [String]
+}

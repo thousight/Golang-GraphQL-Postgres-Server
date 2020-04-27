@@ -14,29 +14,13 @@ type Query {
 type Mutation {
   # Education
   addEducation(
-    organization: String!,
-    city: String!,
-    state: String!,
-    degree: String!,
-    time: String!,
-    order: Int!,
-    image: String!,
-    desc: [String]!,
-    primaryColor: String!,
-    secondaryColor: String!,
-    bannerImage: String
+    education: EducationInput!,
+    style: StyleInput!
   ): Education
 
   updateEducation(
     _id: String!,
-    organization: String,
-    city: String,
-    state: String,
-    degree: String,
-    time: String,
-    order: Int,
-    image: String,
-    desc: [String]
+    education: EducationInput!
   ): Education
 
   deleteEducation(
@@ -46,29 +30,13 @@ type Mutation {
 
   # Experience
   addExperience(
-    organization: String!,
-    city: String!,
-    state: String!,
-    title: String!,
-    time: String!,
-    order: Int!,
-    image: String!,
-    desc: [String]!,
-    primaryColor: String!,
-    secondaryColor: String!,
-    bannerImage: String
+    experience: ExperienceInput!,
+    style: StyleInput!
   ): Experience
 
   updateExperience(
     _id: String!,
-    organization: String,
-    city: String,
-    state: String,
-    title: String,
-    time: String,
-    order: Int,
-    image: String,
-    desc: [String],
+    experience: ExperienceInput!,
   ): Experience
 
   deleteExperience(
@@ -79,8 +47,6 @@ type Mutation {
   # Style
     updateStyle(
       _id: String!,
-      primaryColor: String,
-      secondaryColor: String,
-      bannerImage: String
+      style: StyleInput!
     ): Style
 }
