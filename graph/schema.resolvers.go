@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 	"golang-graphql-server/graph/generated"
-	"golang-graphql-server/graph/model"
+	"golang-graphql-server/graph/generated/model"
 )
 
 func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
