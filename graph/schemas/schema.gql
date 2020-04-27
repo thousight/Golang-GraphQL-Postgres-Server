@@ -1,0 +1,9 @@
+type Query {
+  todos: [Todo!]!
+  users: [User!]!
+}
+
+type Mutation {
+  createTodo(input: NewTodo!): Todo!
+  createUser(id: ID!, name: String!): User!
+}

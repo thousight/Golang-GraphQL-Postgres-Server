@@ -14,7 +14,15 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 	panic(fmt.Errorf("not implemented"))
 }
 
+func (r *mutationResolver) CreateUser(ctx context.Context, id string, name string) (*model.User, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
