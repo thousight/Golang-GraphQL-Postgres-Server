@@ -1,0 +1,14 @@
+type Education {
+  _id: String
+  organization: String
+  city: String
+  state: String
+  degree: String
+  time: String
+  order: Int
+  image: String
+  desc: [String]
+  style: Style
+  createdAt: Time
+  updatedAt: Time
+}

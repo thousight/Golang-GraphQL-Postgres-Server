@@ -10,19 +10,47 @@ import (
 	"golang-graphql-server/graph/generated/model"
 )
 
-func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
+func (r *mutationResolver) AddEducation(ctx context.Context, organization string, city string, state string, degree string, time string, order int, image string, desc []*string, primaryColor string, secondaryColor string, bannerImage *string) (*model.Education, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *mutationResolver) CreateUser(ctx context.Context, id string, name string) (*model.User, error) {
+func (r *mutationResolver) UpdateEducation(ctx context.Context, id string, organization *string, city *string, state *string, degree *string, time *string, order *int, image *string, desc []*string) (*model.Education, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+func (r *mutationResolver) DeleteEducation(ctx context.Context, id string, styleID string) (*model.Education, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
+func (r *mutationResolver) AddExperience(ctx context.Context, organization string, city string, state string, title string, time string, order int, image string, desc []*string, primaryColor string, secondaryColor string, bannerImage *string) (*model.Experience, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *mutationResolver) UpdateExperience(ctx context.Context, id string, organization *string, city *string, state *string, title *string, time *string, order *int, image *string, desc []*string) (*model.Experience, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *mutationResolver) DeleteExperience(ctx context.Context, id string, styleID string) (*model.Experience, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *mutationResolver) UpdateStyle(ctx context.Context, id string, primaryColor *string, secondaryColor *string, bannerImage *string) (*model.Style, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) AllEducations(ctx context.Context) ([]*model.Education, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) GetEducationByID(ctx context.Context, id string) (*model.Education, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) AllExperiences(ctx context.Context) ([]*model.Experience, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) GetExperienceByID(ctx context.Context, id string) (*model.Experience, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 

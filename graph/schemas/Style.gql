@@ -1,0 +1,8 @@
+type Style {
+  _id: String
+  primaryColor: String
+  secondaryColor: String
+  bannerImage: String
+  createdAt: Time
+  updatedAt: Time
+}
