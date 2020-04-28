@@ -3,6 +3,7 @@ package main
 import (
 	"golang-graphql-server/graph"
 	"golang-graphql-server/graph/generated"
+	"golang-graphql-server/graph/utils"
 	"log"
 	"net/http"
 	"os"
@@ -11,13 +12,10 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 )
 
-const defaultPort = "8080"
-
 func main() {
+	utils.InitDotEnv()
+
 	port := os.Getenv("PORT")
-	if port == "" {
-		port = defaultPort
-	}
 
 	server := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
 
