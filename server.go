@@ -17,7 +17,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 
-	server := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
+	server := handler.NewDefaultServer(generated.NewExecutableSchema(graph.InitializeResolver()))
 
 	http.Handle("/", playground.Handler("GraphQL playground", "/graphql"))
 	http.Handle("/graphql", server)
