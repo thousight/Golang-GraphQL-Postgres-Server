@@ -1,6 +1,6 @@
 type Education {
   id: String!
-  organization: String!
+  school: String!
   city: String!
   state: String!
   degree: String!
@@ -9,15 +9,15 @@ type Education {
   monthEnd: Int
   yearEnd: Int
   order: Int!
-  image: String!
-  desc: [String]!
+  logoURL: String!
+  descriptions: [String]!
   style: Style!
   createdAt: Time!
   updatedAt: Time!
 }
 
 input EducationInput {
-  organization: String!,
+  school: String!,
   city: String!,
   state: String!,
   degree: String!,
@@ -26,6 +26,6 @@ input EducationInput {
   monthEnd: Int
   yearEnd: Int
   order: Int!,
-  image: String!,
-  desc: [String]!
+  logoURL: String!,
+  descriptions: [String]!
 }

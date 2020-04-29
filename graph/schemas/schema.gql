@@ -14,18 +14,18 @@ type Mutation {
   ): Education
 
   updateEducation(
-    _id: String!,
+    id: String!,
     education: EducationInput!,
   ): Education
 
   deleteEducation(
-    _id: String!,
+    id: String!,
     styleId: String!
   ): Education
 
   # Style
     updateStyle(
-      _id: String!,
+      id: String!,
       style: StyleInput!
     ): Style
 }

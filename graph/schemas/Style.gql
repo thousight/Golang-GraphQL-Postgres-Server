@@ -11,5 +11,6 @@ type Style {
 input StyleInput {
   primaryColor: String
   secondaryColor: String
+  accentColor: String
   bannerImage: String
 }

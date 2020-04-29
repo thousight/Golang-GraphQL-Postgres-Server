@@ -11,3 +11,7 @@ func (r *queryResolver) resolveAllEducations(ctx context.Context) ([]*model.Educ
 	fmt.Println(r.redisClient)
 	panic(fmt.Errorf("not implemented"))
 }
+
+func (r *mutationResolver) resolveAddEducation(ctx context.Context, education model.EducationInput, style model.StyleInput) (*model.Education, error) {
+	panic(fmt.Errorf("not implemented"))
+}

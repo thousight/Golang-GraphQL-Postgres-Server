@@ -11,7 +11,7 @@ import (
 )
 
 func (r *mutationResolver) AddEducation(ctx context.Context, education model.EducationInput, style model.StyleInput) (*model.Education, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.resolveAddEducation(ctx, education, style)
 }
 
 func (r *mutationResolver) UpdateEducation(ctx context.Context, id string, education model.EducationInput) (*model.Education, error) {
