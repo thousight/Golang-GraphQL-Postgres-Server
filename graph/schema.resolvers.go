@@ -32,6 +32,7 @@ func (r *mutationResolver) UpdateStyle(ctx context.Context, id string, style mod
 
 func (r *queryResolver) AllEducations(ctx context.Context) ([]*model.Education, error) {
 	fmt.Println(r.dbClient)
+	fmt.Println(r.redisClient)
 	panic(fmt.Errorf("not implemented"))
 }
 

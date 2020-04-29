@@ -19,7 +19,6 @@ func Connect() *pgx.Conn {
 	} else {
 		fmt.Println("Database connected")
 	}
-	defer conn.Close(context.Background())
 
 	return conn
 }
