@@ -1,7 +1,8 @@
 type Style {
-  _id: String
+  id: String
   primaryColor: String
   secondaryColor: String
+  accentColor: String
   bannerImage: String
   createdAt: Time
   updatedAt: Time

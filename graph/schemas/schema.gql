@@ -4,11 +4,6 @@ type Query {
   # Education
     allEducations: [Education]
     getEducationById(_id: String!): Education
-
-    # Experience
-    allExperiences: [Experience]
-    getExperienceById(_id: String!): Experience
-
 }
 
 type Mutation {
@@ -18,21 +13,15 @@ type Mutation {
     style: StyleInput!
   ): Education
 
+  updateEducation(
+    _id: String!,
+    education: EducationInput!,
+  ): Education
+
   deleteEducation(
     _id: String!,
     styleId: String!
   ): Education
-
-  # Experience
-  addExperience(
-    experience: ExperienceInput!,
-    style: StyleInput!
-  ): Experience
-
-  deleteExperience(
-    _id: String!,
-    styleId: String!
-  ): Experience
 
   # Style
     updateStyle(
