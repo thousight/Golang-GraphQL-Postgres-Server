@@ -1,4 +1,4 @@
-package graph
+package resolvers
 
 import (
 	"golang-graphql-server/graph/generated"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"golang-graphql-server/graph"
 	"golang-graphql-server/graph/generated"
+	"golang-graphql-server/graph/resolvers"
 	"golang-graphql-server/graph/utils"
 	"log"
 	"net/http"
@@ -17,7 +17,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 
-	server := handler.NewDefaultServer(generated.NewExecutableSchema(graph.InitializeResolver()))
+	server := handler.NewDefaultServer(generated.NewExecutableSchema(resolvers.InitializeResolver()))
 
 	http.Handle("/", playground.Handler("GraphQL playground", "/graphql"))
 	http.Handle("/graphql", server)

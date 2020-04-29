@@ -1,4 +1,4 @@
-package graph
+package resolvers
 
 // This file will be automatically regenerated based on the schema, any resolver implementations
 // will be copied through when generating and any unknown code will be moved to the end.
@@ -27,9 +27,7 @@ func (r *mutationResolver) UpdateStyle(ctx context.Context, id string, style mod
 }
 
 func (r *queryResolver) AllEducations(ctx context.Context) ([]*model.Education, error) {
-	fmt.Println(r.dbClient)
-	fmt.Println(r.redisClient)
-	panic(fmt.Errorf("not implemented"))
+	return r.resolveAllEducations(ctx)
 }
 
 func (r *queryResolver) GetEducationByID(ctx context.Context, id string) (*model.Education, error) {
