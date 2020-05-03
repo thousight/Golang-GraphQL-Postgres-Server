@@ -5,13 +5,13 @@ import (
 	"golang-graphql-server/graph/services/postgres"
 	"golang-graphql-server/graph/services/redis"
 
+	"github.com/Masterminds/squirrel"
 	redisLib "github.com/gomodule/redigo/redis"
-	"github.com/jackc/pgx/v4"
 )
 
 // Resolver serves as dependency injection for your app, add any dependencies you require here.
 type Resolver struct {
-	dbClient    pgx.Conn
+	dbClient    squirrel.StatementBuilderType
 	redisClient redisLib.Conn
 }
 
@@ -19,7 +19,7 @@ type Resolver struct {
 func InitializeResolver() generated.Config {
 	resolver := Resolver{}
 
-	resolver.dbClient = *postgres.Connect()
+	resolver.dbClient = postgres.Connect()
 	resolver.redisClient = redis.Connect()
 
 	return generated.Config{

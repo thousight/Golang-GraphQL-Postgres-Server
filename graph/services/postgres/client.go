@@ -3,22 +3,26 @@ package postgres
 import (
 	"golang-graphql-server/graph/utils"
 
-	"context"
 	"fmt"
 	"os"
 
-	"github.com/jackc/pgx/v4"
+	"github.com/Masterminds/squirrel"
+	"github.com/jackc/pgx"
+	"github.com/jackc/pgx/stdlib"
 )
 
 // Connect connects server to DB and returns a connection client
-func Connect() *pgx.Conn {
-	conn, err := pgx.Connect(context.Background(), utils.GetEnv("DATABASE_URL"))
+func Connect() squirrel.StatementBuilderType {
+	config, err := pgx.ParseURI(utils.GetEnv("DATABASE_URL"))
+
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Unable to database URI: %v\n", err)
 		os.Exit(1)
-	} else {
-		fmt.Println("Database connected")
 	}
 
-	return conn
+	db := stdlib.OpenDB(config)
+
+	fmt.Println("Database connected")
+
+	return squirrel.StatementBuilder.PlaceholderFormat(squirrel.Dollar).RunWith(db)
 }

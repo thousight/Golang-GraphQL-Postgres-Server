@@ -3,14 +3,12 @@ type Style {
   primaryColor: String
   secondaryColor: String
   accentColor: String
-  bannerImage: String
-  createdAt: Time
-  updatedAt: Time
+  imageURL: String
 }
 
 input StyleInput {
   primaryColor: String
   secondaryColor: String
   accentColor: String
-  bannerImage: String
+  imageURL: String
 }
